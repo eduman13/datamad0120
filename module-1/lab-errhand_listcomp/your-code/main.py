@@ -80,7 +80,7 @@ print("9. consonantes:", "".join(consonants))
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-files = [i.split("\\")[-1] for i in glob.glob(r"C:\Users\Eduardo\Desktop\iron-hack\datamad0120\*") if os.path.isdir(i)]
+files = [i.split("\\")[-1] for i in glob.glob(r"./*") if os.path.isdir(i)]
 print("10. files:", ", ".join(files))
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list.
@@ -186,7 +186,7 @@ def linux_interaction():
         assert ('linux' in sys.platform), "Function can only run on Linux systems."
         print('Doing something.')
     except Exception as e:
-        raise(e)
+        raise e
 
 try:
     linux_interaction()
